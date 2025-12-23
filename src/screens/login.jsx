@@ -1,24 +1,31 @@
 // src/screens/login.jsx
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import Button from "../components/Button";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+
+  const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    console.log(email, password);
+    // Aquí luego validaremos usuario/contraseña
+    console.log(usuario, password);
+
+    // 👉 Navegar al dashboard
+    navigate("/dashboard");
   };
 
   return (
     <div style={{ maxWidth: "400px", margin: "50px auto" }}>
-      <h2>Login</h2>
+      <h2>Iniciar sesión</h2>
 
       <Input
-        label="Correo"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        label="Usuario"
+        value={usuario}
+        onChange={(e) => setUsuario(e.target.value)}
       />
 
       <Input
@@ -28,7 +35,7 @@ export default function Login() {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <Button text="Ingresar" onClick={handleLogin} />
+      <Button text="Entrar" onClick={handleLogin} />
     </div>
   );
 }
