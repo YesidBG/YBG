@@ -1,19 +1,34 @@
-// screens/Login.jsx
-import { useNavigate } from "react-router-dom";
+// src/screens/login.jsx
+import { useState } from "react";
+import Input from "../components/Input";
+import Button from "../components/Button";
 
 export default function Login() {
-  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    navigate("/dashboard");
+    console.log(email, password);
   };
 
   return (
-    <div>
-      <h2>Iniciar sesiónsss</h2>
-      <input placeholder="Usuario" />
-      <input type="password" placeholder="Contraseña" />
-      <button onClick={handleLogin}>Entrar</button>
+    <div style={{ maxWidth: "400px", margin: "50px auto" }}>
+      <h2>Login</h2>
+
+      <Input
+        label="Correo"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <Input
+        label="Contraseña"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <Button text="Ingresar" onClick={handleLogin} />
     </div>
   );
 }

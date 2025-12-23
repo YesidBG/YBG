@@ -1,15 +1,14 @@
-// screens/Dashboard.jsx
-import { useNavigate } from "react-router-dom";
+// src/screens/Dashboard.jsx
+import Navbar from "../components/Navbar";
 
 export default function Dashboard() {
-  const navigate = useNavigate();
-
   return (
-    <div>
-      <h1>Panel Principal</h1>
-      <button onClick={() => navigate("/usuarios")}>
-        Ver Usuarios
-      </button>
-    </div>
+    <>
+      <Navbar />
+      <div style={{ padding: "20px" }}>
+        <h1>Dashboard</h1>
+        <p>Bienvenido al panel principal</p>
+      </div>
+    </>
   );
 }
