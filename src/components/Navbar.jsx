@@ -1,25 +1,20 @@
-// src/components/Navbar.jsx
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 export default function Navbar() {
   return (
-    <nav
-      style={{
-        backgroundColor: "#0364C9",
-        padding: "10px",
-        display: "flex",
-        gap: "15px"
-      }}
-    >
-      <Link to="/dashboard" style={{ color: "#fff", textDecoration: "none" }}>
+    <nav className="navbar">
+      <NavLink to="/dashboard" className="nav-button">
         Dashboard
-      </Link>
-      <Link to="/usuarios" style={{ color: "#fff", textDecoration: "none" }}>
+      </NavLink>
+
+      <NavLink to="/usuarios" className="nav-button">
         Usuarios
-      </Link>
-      <Link to="/usuarios/nuevo" style={{ color: "#fff", textDecoration: "none" }}>
+      </NavLink>
+
+      <NavLink to="/usuarios/nuevo" className="nav-button">
         Nuevo Usuario
-      </Link>
+      </NavLink>
     </nav>
   );
 }
