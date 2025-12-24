@@ -1,24 +1,50 @@
-.user-form {
-  padding: 30px;
+.user-form-container {
   max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.photo-preview {
-  margin-top: 15px;
+.user-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-form-container input,
+.user-form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.user-form-container button {
+  width: 100%;
+  padding: 10px;
+  background: #0364c9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-form-container button:hover {
+  background: #024fa0;
+}
+
+.preview-box {
   display: flex;
   justify-content: center;
+  margin: 15px 0;
 }
 
-.photo-preview img {
-  width: 150px;
-  height: 150px;
+.preview-box img {
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid #0364C9;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.photo-preview img:hover {
-  transform: scale(1.05);
+  border-radius: 50%;
+  border: 2px solid #0364c9;
 }

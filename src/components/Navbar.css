@@ -3,9 +3,10 @@
   padding: 12px;
   display: flex;
   gap: 15px;
+  align-items: center;
 }
 
-/* Estilo tipo botón */
+/* Botones normales */
 .nav-button {
   padding: 10px 18px;
   border-radius: 8px;
@@ -29,32 +30,21 @@
   background-color: #ffffff;
   color: #0364C9;
 }
-<<<<<<< HEAD
 
-
+/* Botón cerrar sesión */
 .nav-buttonb {
+  margin-left: auto;
   padding: 10px 30px;
   border-radius: 100px;
-  margin-left: 1230px;
   border: 2px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
-  text-decoration: none;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
-
 .nav-buttonb:hover {
   background-color: #ffffff;
   color: #0364C9;
 }
-
-
-.nav-buttonb.active {
-  background-color: #ffffff;
-  color: #0364C9;
-}
-=======
->>>>>>> a26812ec3ff5f6fe44448db25754bbf762fe4d7a
