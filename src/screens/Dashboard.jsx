@@ -1,4 +1,5 @@
 // src/screens/Dashboard.jsx
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./Dashboard.css"; // 👈 IMPORTAR CSS
@@ -31,3 +32,18 @@ export default function Dashboard() {
     </>
   );
 }
+=======
+import Navbar from "../components/Navbar";
+
+export default function Dashboard() {
+  return (
+    <>
+      <Navbar />
+      <div style={{ padding: "20px" }}>
+        <h1>Dashboard</h1>
+        <p>Bienvenido al panel principal</p>
+      </div>
+    </>
+  );
+}
+>>>>>>> a26812ec3ff5f6fe44448db25754bbf762fe4d7a
