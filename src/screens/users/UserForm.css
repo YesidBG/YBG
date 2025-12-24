@@ -1,10 +1,10 @@
 .user-form-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 30px auto;
   padding: 25px;
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(41, 3, 3, 0.616);
 }
 
 .user-form-container h2 {
