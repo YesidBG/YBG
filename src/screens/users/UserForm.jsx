@@ -43,43 +43,57 @@ export default function UserForm() {
       <div className="user-form-container">
         <h2>Registrar Usuario</h2>
 
-        <input
-          placeholder="Identificación"
-          value={identificacion}
-          onChange={(e) => setIdentificacion(e.target.value)}
-        />
+        {/* Tipo Documento + Identificación */}
+        <div className="form-row">
+          <select
+            value={tipoDocumento}
+            onChange={(e) => setTipoDocumento(e.target.value)}
+          >
+            <option value="">Tipo Doc</option>
+            <option value="CC">CC</option>
+            <option value="TI">TI</option>
+            <option value="CE">CE</option>
+            <option value="PAS">PAS</option>
+          </select>
 
-        <select
-          value={tipoDocumento}
-          onChange={(e) => setTipoDocumento(e.target.value)}
-        >
-          <option value="">Seleccione tipo de documento</option>
-          <option value="CC">Cédula de Ciudadanía</option>
-          <option value="TI">Tarjeta de Identidad</option>
-          <option value="CE">Cédula de Extranjería</option>
-          <option value="PAS">Pasaporte</option>
-        </select>
+          <input
+            placeholder="Identificación"
+            value={identificacion}
+            onChange={(e) => setIdentificacion(e.target.value)}
+          />
+        </div>
 
-        <input
-          placeholder="Nombre"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-        />
+        {/* Nombre + Apellido */}
+        <div className="form-row">
+          <input
+            placeholder="Nombre"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+          />
 
-        <input
-          placeholder="Apellido"
-          value={apellido}
-          onChange={(e) => setApellido(e.target.value)}
-        />
+          <input
+            placeholder="Apellido"
+            value={apellido}
+            onChange={(e) => setApellido(e.target.value)}
+          />
+        </div>
 
-        <input
-          type="date"
-          value={fechaNacimiento}
-          onChange={(e) => setFechaNacimiento(e.target.value)}
-        />
+        {/* FECHA + ADJUNTO (SOLO ESTO SE CAMBIÓ) */}
+        <div className="form-row">
+          <input
+            type="date"
+            value={fechaNacimiento}
+            onChange={(e) => setFechaNacimiento(e.target.value)}
+          />
 
-        <input type="file" accept="image/*" onChange={handleFotoChange} />
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleFotoChange}
+          />
+        </div>
 
+        {/* Vista previa ABAJO (igual que antes) */}
         {preview && (
           <div className="preview-box">
             <img src={preview} alt="Vista previa" />

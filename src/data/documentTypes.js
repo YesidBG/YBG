@@ -1,8 +1,6 @@
-const documentTypes = [
-  { id: 1, label: "Cédula de ciudadanía", value: "CC" },
-  { id: 2, label: "Tarjeta de identidad", value: "TI" },
-  { id: 3, label: "Cédula de extranjería", value: "CE" },
-  { id: 4, label: "Pasaporte", value: "PA" }
+export const DOCUMENT_TYPES = [
+  { value: "CC", label: "Cédula de Ciudadanía" },
+  { value: "TI", label: "Tarjeta de Identidad" },
+  { value: "CE", label: "Cédula de Extranjería" },
+  { value: "PAS", label: "Pasaporte" },
 ];
-
-export default documentTypes;
