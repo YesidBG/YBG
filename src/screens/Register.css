@@ -1,0 +1,12 @@
+.register-link {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #0b5ed7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
