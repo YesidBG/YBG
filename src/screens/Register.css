@@ -1,12 +1,64 @@
-.register-link {
-  display: block;
-  margin-top: 15px;
-  text-align: center;
-  color: #0b5ed7;
-  text-decoration: none;
-  font-weight: 500;
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("https://wallpapers.com/images/hd/4k-tech-8ud1fgpt22qs67c7.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.register-link:hover {
-  text-decoration: underline;
+.register-form {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(6, 0, 22, 0.1);
+  display: flex;
+  flex-direction: column;
 }
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.register-form button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0364C9;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #024ea1;
+}
+.error-box {
+  background-color: #ffe5e5;
+  color: #b00020;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ffb3b3;
+}
+

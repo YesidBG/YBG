@@ -8,21 +8,37 @@ export default function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // 🔴 Validar contraseñas
+    if (password !== confirmPassword) {
+      setError("Las contraseñas no coinciden");
+      return;
+
+    }
 
     // Simular guardado
     const user = { name, email, password };
     localStorage.setItem("user", JSON.stringify(user));
 
-    navigate("/");
+    navigate("/dashboard");
   };
 
   return (
-    <div className="login-container">
-      <form className="login-form" onSubmit={handleSubmit}>
+    <div className="register-container">
+      <form className="register-form" onSubmit={handleSubmit}>
         <h2>Registrarse</h2>
+
+       {/* 🔴 MENSAJE DE ERROR */}
+        {error && (
+          <div className="error-box">
+            {error}
+          </div>
+        )}
 
         <input
           placeholder="Nombre"
@@ -42,6 +58,14 @@ export default function Register() {
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+        />
+
+        
+        <input
+          type="password"
+          placeholder="Confirmar contraseña"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
         />
 
         <button type="submit">Crear cuenta</button>
