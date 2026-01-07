@@ -11,13 +11,13 @@ export default function UsersList() {
     <>
       <Navbar />
 
-      <div style={{ padding: "30px" }}>
+      <div className="user-list-container">
         <h2>Usuarios registrados</h2>
 
         <ul>
           {users.map((u, i) => (
             <li key={i}>
-              {u.name} - {u.email}
+              {u.name} - {u.email} - {u.tipoDocumento} - {u.identificacion}
             </li>
           ))}
         </ul>

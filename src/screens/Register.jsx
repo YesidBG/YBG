@@ -14,7 +14,7 @@ export default function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // 🔴 Validar contraseñas
+    //  Validar contraseñas
     if (password !== confirmPassword) {
       setError("Las contraseñas no coinciden");
       return;
@@ -33,7 +33,7 @@ export default function Register() {
       <form className="register-form" onSubmit={handleSubmit}>
         <h2>Registrarse</h2>
 
-       {/* 🔴 MENSAJE DE ERROR */}
+       {/* MENSAJE DE ERROR */}
         {error && (
           <div className="error-box">
             {error}
@@ -60,7 +60,7 @@ export default function Register() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        
+        {/* CONFIRMAR CONTRASEÑA */}
         <input
           type="password"
           placeholder="Confirmar contraseña"
